@@ -81,6 +81,11 @@ ul li {
   transform: scale(1.05);
 }
 
+.header {
+  margin-top: auto;
+  color: #4a628a;
+}
+
 /* RODAPÉ */
 .footer {
   margin-top: 20px;

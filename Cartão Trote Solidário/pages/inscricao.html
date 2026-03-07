@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição 📝</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background-color: #f4f7f6; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+        }
+        .form-container { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 12px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+            width: 100%; 
+            max-width: 400px; 
+        }
+        h2 { color: #333; text-align: center; }
+        label { display: block; margin-top: 15px; font-weight: bold; color: #555; }
+        input, select { 
+            width: 100%; 
+            padding: 10px; 
+            margin-top: 5px; 
+            border: 1px solid #ddd; 
+            border-radius: 6px; 
+            box-sizing: border-box; /* Garante que o padding não quebre a largura */
+        }
+        .btn-enviar { 
+            width: 100%; 
+            background-color: #4A90E2; 
+            color: white; 
+            border: none; 
+            padding: 12px; 
+            margin-top: 20px; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            font-size: 16px; 
+        }
+        .btn-enviar:hover { background-color: #357ABD; }
+        .btn-voltar { 
+            display: block; 
+            text-align: center; 
+            margin-top: 15px; 
+            color: #888; 
+            text-decoration: none; 
+            font-size: 14px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>📝 Ficha de Inscrição</h2>
+        <form action="#" method="POST">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+
+            <label for="atividade">Escolha a Atividade:</label>
+            <select id="atividade" name="atividade">
+                <option value="doacoes">🚀 Doações / Voluntariado</option>
+                <option value="gincanas">⚽ Gincanas Esportivas</option>
+                <option value="acao">🎨 Ação Social</option>
+            </select>
+
+            <button type="submit" class="btn-enviar">Finalizar Inscrição</button>
+        </form>
+
+        <a href="../cartao.html" class="btn-voltar">Voltar para o Início</a>
+    </div>
+
+</body>
+</html>
