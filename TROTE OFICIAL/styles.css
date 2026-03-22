@@ -1,20 +1,15 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
+    margin: 0; font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f7f6; color: #333;
 }
-
-/* ===== MENU ===== */
 .menu {
-    background-color: #1e3c72;
-    padding: 15px 0;
+    background-color: #1e3c72;  padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
-.menu-container {
+.menu-container{
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
@@ -22,7 +17,7 @@ body {
     align-items: center;
     padding: 0 20px;
 }
-.menu-logo {
+.menu-logo{
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -30,121 +25,240 @@ body {
     text-transform: uppercase;
 }
 .lista {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
+    list-style: none; display: flex; gap: 20px;
+    margin: 0; padding: 0;
 }
-.lista a {
-    color: #CBDCF7;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: color 0.3s;
+.lista a{
+    color: #CBDCF7; text-decoration: none; font-size: 0.9rem;
+    font-weight: 500; transition: color 0.3s; 
 }
 .lista a:hover {
     color: #ffffff;
 }
-
-/* ===== CABEÇALHO ===== */
 .cabecalho {
-    background-color: #2e4c82;
-    color: white;
-    padding: 60px 20px;
+    background-color: #2e4c82; color: white; padding: 60px 20px;
     text-align: center;
 }
-.cabecalho h1 {
-    font-size: 2.5rem;
-    margin-bottom: 5px;
+.cabecalho h1{
+    font-size: 2.5rem; margin-bottom: 5px;
 }
-.cabecalho h2 {
+.cabecalho h2{
     font-weight: 300;
     font-style: italic;
-    color: #ffd700;
-    margin-top: 0;
+    color: #ffd700; 
 }
-
-/* ===== PRINCIPAL ===== */
-.principal {
-    max-width: 900px;
-    margin: -40px auto 40px;
-    padding: 20px;
+.principal{
+    max-width: 900px; margin: -40px auto 40px; padding: 20px;
+}
+section {
+    background: white;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.importante {
     display: flex;
-    flex-direction: column;
     gap: 20px;
 }
+.card-meta {
+    flex: 1; background: #eef5ff; padding: 15px; border-left: 5px solid #2a5298;
+    border-radius: 8px;
+}
+.recompensas ul {
+    list-style: none;
+    padding: 0;
+}
+.recompensas li {
+    background: #e9f7ef; margin: 8px 0; padding: 10px;
+    border-radius: 5px; color: #27ae60; font-weight: bold;
+}
+.texto-introducao p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.lista-valores {
+    list-style: none;
+    padding: 0;
+}
+.lista-valores li {
+    background: #eef5ff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 5px solid #1e3c72;
+}
+table {
+    width: 100%; border-collapse: collapse; margin-top: 20px;
+    background-color: white;
+}
+th, td {
+    padding: 15px; text-align: left; border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #2a5298;
+}
+.box-amarela {
+    width: 25px; height: 25px;
+    border-radius: 4px;
+    background: yellow;
+}
 
-/* ===== CARD GENÉRICO ===== */
-.card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+/* =============================
+   PÁGINA DE PROVAS E METAS
+   ============================= */
+
+.provas-header {
+    text-align: center;
+    padding: 30px 0 10px;
 }
-.card h3 {
-    margin-top: 0;
-    font-size: 1.2rem;
-    color: #222;
+.provas-header h2 {
+    color: #1e3c72;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
 }
-.card p {
-    color: #444;
-    font-size: 0.95rem;
+.provas-header p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Card base de prova */
+.prova-card {
+    background: white;
+    margin-bottom: 24px;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-left: 5px solid #2a5298;
+}
+.prova-card.destaque-amarelo {
+    border-left: 5px solid #f0c000;
+    background: #fffdf0;
+}
+.prova-card.destaque-vermelho {
+    border-left: 5px solid #e74c3c;
+    background: #fff8f8;
+}
+.prova-card h3 {
+    margin: 0 0 10px;
+    color: #1e3c72;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.prova-card > p {
+    color: #555;
+    margin-bottom: 16px;
     line-height: 1.6;
 }
 
-/* ===== PILARES ===== */
-.pilar {
-    margin-top: 14px;
-}
-.pilar strong {
-    display: block;
-    font-size: 0.95rem;
-    margin-bottom: 4px;
-    color: #222;
-}
-.pilar p {
-    margin: 0;
-    color: #555;
-    font-size: 0.9rem;
-}
-
-/* ===== DATAS ===== */
-.datas-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-}
-.data-card {
-    background-color: #eef3fb;
-    border-left: 4px solid #2e4c82;
+/* Box de itens do kit */
+.kit-box {
+    background: #fffde7;
+    border: 2px dashed #f0c000;
     border-radius: 8px;
-    padding: 18px 20px;
+    padding: 16px 20px;
+    margin-top: 12px;
 }
-.data-card strong {
-    display: block;
-    font-size: 0.95rem;
-    color: #1e3c72;
-    margin-bottom: 8px;
-}
-.data-card p {
+.kit-box ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
-    font-size: 0.88rem;
+}
+.kit-box ul li {
+    padding: 6px 0;
     color: #444;
-    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.kit-box ul li::before {
+    content: "✅";
+    font-size: 0.9rem;
 }
 
-/* ===== HORAS-ATIVIDADE ===== */
-.horas-lista {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 10px;
+/* Subtítulo e descrição da tabela de avulsos */
+.subtitulo-avulsos {
+    margin: 20px 0 8px;
+    color: #1e3c72;
 }
-.hora-item {
-    background-color: #e8f5e9;
-    border-radius: 6px;
-    padding: 12px 16px;
+.descricao-avulsos {
+    color: #666;
     font-size: 0.9rem;
-    color: #2e7d32;
+    margin-bottom: 0;
+}
+
+/* Tabela de itens avulsos */
+.tabela-avulsos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.tabela-avulsos th {
+    background-color: #2a5298;
+    color: white;
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.tabela-avulsos td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    color: #444;
+}
+.tabela-avulsos tr:last-child td {
+    border-bottom: none;
+}
+.tabela-avulsos tr:hover td {
+    background-color: #f0f5ff;
+}
+
+/* Lista de requisitos */
+.requisitos {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+}
+.requisitos li {
+    padding: 6px 0;
+    line-height: 1.5;
+    color: #444;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+}
+.req-ok::before    { content: "✅"; flex-shrink: 0; }
+.req-aviso::before { content: "⚠️"; flex-shrink: 0; }
+.req-info::before  { content: "📋"; flex-shrink: 0; }
+.req-premio::before{ content: "🏅"; flex-shrink: 0; }
+
+.req-aviso { color: #c0392b; }
+.req-ok    { color: #27ae60; }
+.req-info  { color: #2a5298; }
+
+/* Nota de pontuação */
+.nota-pontos {
+    margin-top: 12px;
+    color: #555;
+}
+
+/* Rodapé */
+.rodape {
+    background: #1e3c72;
+    color: #cdd8f0;
+    text-align: center;
+    padding: 24px 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+.rodape a {
+    color: #ffd700;
+    text-decoration: none;
 }
